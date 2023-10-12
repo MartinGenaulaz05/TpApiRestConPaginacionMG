@@ -148,7 +148,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/search?filtro=lALA",
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/search?filtro=Martin",
 							"protocol": "https",
 							"host": [
 								"api-rest-conpaginacion-mg",
@@ -164,7 +164,7 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "lALA"
+									"value": "Martin"
 								}
 							]
 						}
@@ -214,7 +214,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/searchPaged?filtro=a&page=0&size=5&sort=id,desc",
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/searchPaged?filtro=Genaulaz&page=0&size=5&sort=id,desc",
 							"protocol": "https",
 							"host": [
 								"api-rest-conpaginacion-mg",
@@ -230,7 +230,7 @@
 							"query": [
 								{
 									"key": "filtro",
-									"value": "a"
+									"value": "Genaulaz"
 								},
 								{
 									"key": "page",
