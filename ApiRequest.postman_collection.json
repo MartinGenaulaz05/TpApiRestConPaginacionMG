@@ -1,0 +1,524 @@
+{
+	"info": {
+		"_postman_id": "f3ad9b54-305e-4313-ac52-55efd523bdb8",
+		"name": "ApiRequest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30267569"
+	},
+	"item": [
+		{
+			"name": "Personas",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\":\"Martin\",\r\n    \"apellido\":\"Genaulaz\",\r\n    \"dni\":4255665,\r\n    \"domicilio\":{\r\n        \"calle\":\"Santa Rosa\",\r\n        \"numero\":123,\r\n        \"localidad\":{\r\n            \"id\": 1,\r\n            \"denominacion\":\"Rivadavia\"\r\n        }\r\n    },\r\n    \"libros\":[\r\n        {\r\n            \"titulo\":\"Soy de River\",\r\n            \"fecha\":2018,\r\n            \"genero\":\"Madrid\",\r\n            \"paginas\": 912,\r\n            \"autores\":[\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Gonzalo\",\r\n                    \"apellido\": \"Martinez\",\r\n                    \"biografia\": \"Un hincha de River\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"nombre\": \"Lucas\",\r\n    \"apellido\": \"Genaulaz\",\r\n    \"dni\": 4255665,\r\n    \"domicilio\": {\r\n        \"id\": 1,\r\n        \"calle\": \"Santa Rosa\",\r\n        \"numero\": 123,\r\n        \"localidad\": {\r\n            \"id\": 1,\r\n            \"denominacion\": \"Rivadavia\"\r\n        }\r\n    },\r\n    \"libros\": [\r\n        {\r\n            \"id\": 3,\r\n            \"titulo\": \"Soy de River\",\r\n            \"fecha\": 2018,\r\n            \"genero\": \"Madrid\",\r\n            \"paginas\": 912,\r\n            \"autores\": [\r\n                {\r\n                    \"id\": 1,\r\n                    \"nombre\": \"Gonzalo\",\r\n                    \"apellido\": \"Martinez\",\r\n                    \"biografia\": \"Un hincha de River\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+						},
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/6",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/1",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/search?filtro=lALA",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"search"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "lALA"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET ALL PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/paged?page=0&size=5&sort=id,asc",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"paged"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SEARCH PAGED",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/personas/searchPaged?filtro=a&page=0&size=5&sort=id,desc",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personas",
+								"searchPaged"
+							],
+							"query": [
+								{
+									"key": "filtro",
+									"value": "a"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "sort",
+									"value": "id,desc"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Autores",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nombre\": \"Gonzalo\",\r\n    \"apellido\": \"Martinez\",\r\n    \"biografia\":\"Un hincha de River\"\r\n}"
+						},
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/autores",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/autores/1",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"autores",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Localidades",
+			"item": [
+				{
+					"name": "Get all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get one",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"denominacion\": \"Rivadavia\"\r\n}"
+						},
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/localidades",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://api-rest-conpaginacion-mg.onrender.com/api/v1/localidades/1",
+							"protocol": "https",
+							"host": [
+								"api-rest-conpaginacion-mg",
+								"onrender",
+								"com"
+							],
+							"path": [
+								"api",
+								"v1",
+								"localidades",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
